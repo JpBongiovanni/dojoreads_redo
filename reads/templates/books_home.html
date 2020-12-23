@@ -6,6 +6,14 @@
     <title>Books Home</title>
 </head>
 <body>
-    <h1>Welcome!</h1>
+    <h1>Welcome {{user.first_name}}!</h1>
+    <h3>Recent Book Reviews:</h3>
+    {% for Book in book %}
+        Book Title: {{Book.title}}<br>
+        Author: {{Book.author.name}}<br>
+        Contributor: {{Book.contributor.first_name}}<br>
+        Contributor Review: {{Book.reviews.content}}
+<!-- You are trying to figure out how to get the Review to render on the page -(12/24/2020) -->
+    {% endfor %}
 </body>
 </html>
